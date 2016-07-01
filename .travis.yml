@@ -11,4 +11,4 @@ before_install:
 
 script:
   - docker run -it --rm stocksoftware/openmq sh -c '/opt/glassfish/mq/bin/imqcmd -version'
-  - docker run -it --rm stocksoftware/openmq sh -c '/opt/glassfish/mq/bin/imqbrokerd --help'
+  - docker run -it --rm stocksoftware/openmq sh -c '/opt/glassfish/mq/bin/imqbrokerd -version'
