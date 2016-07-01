@@ -1,0 +1,14 @@
+sudo: required
+
+language: c
+
+services:
+  - docker
+
+before_install:
+  - docker info
+  - docker build -t stocksoftware/openmq .
+
+script:
+  - docker run -it --rm stocksoftware/openmq sh -c '/opt/glassfish/mq/bin/imqcmd -version'
+  - docker run -it --rm stocksoftware/openmq sh -c '/opt/glassfish/mq/bin/imqbrokerd --help'
