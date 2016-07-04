@@ -14,4 +14,4 @@
 
 FROM stocksoftware/glassfish:latest
 
-ENTRYPOINT /opt/glassfish/mq/bin/imqbrokerd -bgnd -autorestart -tty -name MessageBroker -Dimq.service.activelist=admin,jms -Dimq.portmapper.port=${IMQ_PORTMAPPER_PORT}
+CMD /opt/glassfish/mq/bin/imqbrokerd -bgnd -autorestart -tty -name MessageBroker -Dimq.service.activelist=admin,jms -Dimq.portmapper.port=${IMQ_PORTMAPPER_PORT}
