@@ -14,6 +14,4 @@
 
 FROM stocksoftware/glassfish:latest
 
-EXPOSE 7676
-
-CMD ["/opt/glassfish/mq/bin/imqbrokerd", "-bgnd", "-autorestart", "-tty", "-name", "MessageBroker"]
+ENTRYPOINT /opt/glassfish/mq/bin/imqbrokerd -bgnd -autorestart -tty -name MessageBroker -Dimq.service.activelist=admin,jms -Dimq.portmapper.port=${IMQ_PORTMAPPER_PORT}
