@@ -6,6 +6,6 @@ A minimal docker image designed to provide a openmq message broker useful for te
 
 ### Usage
 
-Example: 
+Example:
 
     docker run -it --rm stocksoftware/openmq:latest
